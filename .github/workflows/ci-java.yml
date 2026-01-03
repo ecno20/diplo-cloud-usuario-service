@@ -1,0 +1,49 @@
+name: CI - Java Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    name: Build & Test Java App
+    runs-on: ubuntu-latest
+
+    env:
+      JAVA_VERSION: '17'
+      MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+      MONGO_PORT: ${{ secrets.MONGO_PORT }}
+      MONGO_HOSTNAME: ${{ secrets.MONGO_HOSTNAME }}
+      MONGO_DB: ${{ secrets.MONGO_DB }}
+      MONGO_USER: ${{ secrets.MONGO_USER }}
+      MONGO_PWD: ${{ secrets.MONGO_PWD }}
+      TOMCAT_PORT: ${{ secrets.TOMCAT_PORT }}
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: 'maven'
+
+      - name: Validate project
+        run: mvn -B validate
+
+      - name: Run unit tests
+        run: mvn -B test
+        
+      - name: Run message
+        run: echo "Prueba efectuada con éxito"
+        
+      - name: Run message-add env
+        run: echo "Se agregan secrets"
