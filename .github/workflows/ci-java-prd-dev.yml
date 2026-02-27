@@ -1,4 +1,4 @@
-name: CI - Java Maven-PRD
+name: CI - Java Maven-DEV
 
 on:
   push:
