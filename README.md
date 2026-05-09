@@ -6,3 +6,5 @@ Implementation of cliente microservice for the pixup application. The cliente mi
 - Nombre
 - Dirección
 - email
+
+[![CI Caller](https://github.com/ecno20/diplo-cloud-usuario-service/actions/workflows/ci.yml/badge.svg)](https://github.com/ecno20/diplo-cloud-usuario-service/actions/workflows/ci.yml)
