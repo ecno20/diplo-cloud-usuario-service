@@ -21,10 +21,11 @@ jobs:
       MONGO_PORT: ${{ secrets.MONGO_PORT }}
       MONGO_HOSTNAME: ${{ secrets.MONGO_HOSTNAME }}
       MONGO_DB: ${{ secrets.MONGO_DB }}
-      MONGO_AUTHDB: ${{ secrets.MONGO_AUTHDB }}
       MONGO_USER: ${{ secrets.MONGO_USER }}
       MONGO_PWD: ${{ secrets.MONGO_PWD }}
+      MONGO_AUTHDB: ${{ secrets.MONGO_AUTHDB }}
       TOMCAT_PORT: ${{ secrets.TOMCAT_PORT }}
+
 
     steps:
       - name: Checkout source code
