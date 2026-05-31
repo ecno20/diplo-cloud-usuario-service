@@ -3,11 +3,18 @@ package unam.diplomado.pixup.usuarioservice;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class UsuarioServiceApplicationTests {
+// @SpringBootTest
+// class UsuarioServiceApplicationTests {
 
+// 	@Test
+// 	void contextLoads() {
+// 	}
+
+// }
+@SpringBootTest
+@org.springframework.test.context.ActiveProfiles("test")
+class UsuarioServiceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
