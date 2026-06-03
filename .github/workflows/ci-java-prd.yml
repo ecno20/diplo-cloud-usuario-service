@@ -23,6 +23,7 @@ jobs:
       MONGO_DB: ${{ secrets.MONGO_DB }}
       MONGO_USER: ${{ secrets.MONGO_USER }}
       MONGO_PWD: ${{ secrets.MONGO_PWD }}
+      MONGO_AUTHDB: ${{ secrets.MONGO_AUTHDB }}
       TOMCAT_PORT: ${{ secrets.TOMCAT_PORT }}
 
     steps:
