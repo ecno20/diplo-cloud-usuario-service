@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: usuario-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: k8s.nuup.ninja
+      http:
+        paths:
+          - path: /usuario-deploy
+            pathType: Prefix
+            backend:
+              service:
+                name: usuario-rest-service
+                port:
+                  number: 8080
