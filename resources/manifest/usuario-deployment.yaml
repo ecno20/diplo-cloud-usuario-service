@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usuario-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usuario-deploy
+  template:
+    metadata:
+      labels:
+        app: usuario-deploy
+    spec:
+      containers:
+        - name: cliente-service-container
+          image: ecno20/usuario-deploy:1.0.0
+          ports:
+            - containerPort: 8080
