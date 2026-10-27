@@ -12,6 +12,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: usuario-rest-service
+                name: usuario-service
                 port:
                   number: 8080
