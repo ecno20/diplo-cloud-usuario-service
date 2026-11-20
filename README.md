@@ -13,3 +13,7 @@ Implementation of cliente microservice for the pixup application. The cliente mi
 ## Ci-Caller -->> Rollback-test
 
 [![CI Caller](https://github.com/ecno20/diplo-cloud-usuario-service/actions/workflows/ci.yml/badge.svg)](https://github.com/ecno20/diplo-cloud-usuario-service/actions/workflows/ci.yml)
+
+## Ci-Caller -->> escaneo de vulnerabilidades con Trivy
+
+[![CI Caller](https://github.com/ecno20/diplo-cloud-usuario-service/actions/workflows/ci.yml/badge.svg)](https://github.com/ecno20/diplo-cloud-usuario-service/actions/workflows/ci.yml)
