@@ -23,6 +23,7 @@ jobs:
       packages: write
       security-events: write
     uses: ecno20/devops-library/.github/workflows/java-build.yml@main
+    secrets: inherit
     with:
       java-version: '17'
       version: ${{ github.event.inputs.version }}
